@@ -2,6 +2,11 @@ package com.dinislam.OnlineShopingSystem.service;
 
 import java.util.List;
 import java.util.Optional;
+
+import javax.websocket.Session;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.dinislam.OnlineShopingSystem.model.Category;
@@ -62,4 +67,15 @@ public class CategoryService {
 		
 		return categoryRepository.saveAll(modelList);
 	}
+	
+	@Autowired
+    SessionFactory sessionFactory;
+	
+	public List<Category> viewAllPcategoryName() {
+        Session session = (Session) sessionFactory.getCurrentSession();
+
+        List<Category> pcatlist = session.createQuery("select p from Category p").list();
+        
+        return pcatlist;
+    }
 }
