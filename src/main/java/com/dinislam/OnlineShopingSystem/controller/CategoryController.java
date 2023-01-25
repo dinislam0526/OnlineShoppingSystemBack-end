@@ -1,5 +1,6 @@
 package com.dinislam.OnlineShopingSystem.controller;
 
+
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.dinislam.OnlineShopingSystem.model.Category;
 import com.dinislam.OnlineShopingSystem.service.CategoryService;
-import com.sayem.chainsupershopmanagement.model.Pcategory;
+
 
 
 @RestController
@@ -62,8 +63,9 @@ public class CategoryController {
 		return categoryService.postAll(modelList);
 	}
 	
-	@GetMapping("/pcategory/catnamelist")
+	@GetMapping("/catnamelist")
     public List<Category> getAllPcategoryName(){
+		System.out.print("hit controller");
         return categoryService.viewAllPcategoryName();
     }
 }

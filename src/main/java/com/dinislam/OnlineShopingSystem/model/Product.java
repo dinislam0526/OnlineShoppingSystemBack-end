@@ -11,19 +11,34 @@ public class Product {
  
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long pro_id;
+	private Integer pro_id;
 	
     private long catid;
     private String pro_name;
     private String pro_cat;
     private String pro_image;
-    private double pro_price;
+    private int pro_price;
     private String pro_desc;
     
-	public long getPro_id() {
+    
+    
+    
+	public Product(Integer pro_id, long catid, String pro_name, String pro_cat, String pro_image, int pro_price,
+			String pro_desc) {
+		super();
+		this.pro_id = pro_id;
+		this.catid = catid;
+		this.pro_name = pro_name;
+		this.pro_cat = pro_cat;
+		this.pro_image = pro_image;
+		this.pro_price = pro_price;
+		this.pro_desc = pro_desc;
+	}
+	
+	public Integer getPro_id() {
 		return pro_id;
 	}
-	public void setPro_id(long pro_id) {
+	public void setPro_id(Integer pro_id) {
 		this.pro_id = pro_id;
 	}
 	public long getCatid() {
@@ -50,10 +65,10 @@ public class Product {
 	public void setPro_image(String pro_image) {
 		this.pro_image = pro_image;
 	}
-	public double getPro_price() {
+	public int getPro_price() {
 		return pro_price;
 	}
-	public void setPro_price(double pro_price) {
+	public void setPro_price(int pro_price) {
 		this.pro_price = pro_price;
 	}
 	public String getPro_desc() {
@@ -63,5 +78,7 @@ public class Product {
 		this.pro_desc = pro_desc;
 	}
     
+	
+	
     
 }

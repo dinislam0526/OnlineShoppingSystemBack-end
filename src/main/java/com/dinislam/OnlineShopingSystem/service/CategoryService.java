@@ -5,7 +5,6 @@ import java.util.Optional;
 
 import javax.websocket.Session;
 
-import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -74,7 +73,8 @@ public class CategoryService {
 	public List<Category> viewAllPcategoryName() {
         Session session = (Session) sessionFactory.getCurrentSession();
 
-        List<Category> pcatlist = session.createQuery("select p from Category p").list();
+        @SuppressWarnings("unchecked")
+		List<Category> pcatlist = ((org.hibernate.Session) session).createQuery("select p from Category p").list();
         
         return pcatlist;
     }
