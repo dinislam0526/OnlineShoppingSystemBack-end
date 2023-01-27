@@ -13,7 +13,7 @@ import com.dinislam.OnlineShopingSystem.model.Category;
 public interface CategoryRepository extends JpaRepository<Category, Long>{
 
 	
-	 @Query(value = "SELECT c.catname FROM category c", nativeQuery = true)
-	    List<String> getAllPcategoryName();
+	 @Query(value = "SELECT * FROM category ", nativeQuery = true)
+	    List<Category> getAllPcategoryName();
 
 }

@@ -64,7 +64,7 @@ public class CategoryController {
 	}
 	
 	@GetMapping("/catnamelist")
-    public List<String> getAllPcategoryName(){
+    public List<Category> getAllPcategoryName(){
 		System.out.print("hit controller");
         return categoryService.getAllPcategoryName();
     }

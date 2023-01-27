@@ -64,7 +64,7 @@ public class CategoryService {
 	}
 	
 	
-    public List<String> getAllPcategoryName() {
+    public List<Category> getAllPcategoryName() {
 		
 		return categoryRepository.getAllPcategoryName();
 	}
