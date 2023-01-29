@@ -19,22 +19,7 @@ public class Product {
     private String pro_image;
     private int pro_price;
     private String pro_desc;
-    
-    
-    
-    
-	public Product(Integer pro_id, long catid, String pro_name, String pro_cat, String pro_image, int pro_price,
-			String pro_desc) {
-		super();
-		this.pro_id = pro_id;
-		this.catid = catid;
-		this.pro_name = pro_name;
-		this.pro_cat = pro_cat;
-		this.pro_image = pro_image;
-		this.pro_price = pro_price;
-		this.pro_desc = pro_desc;
-	}
-	
+   
 	public Integer getPro_id() {
 		return pro_id;
 	}

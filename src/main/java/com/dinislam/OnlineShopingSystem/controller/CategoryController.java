@@ -26,9 +26,9 @@ public class CategoryController {
 	 CategoryService categoryService;
 
 	@PostMapping("/post")
-	public Category post(@RequestBody Category model) {
+	public Category post(@RequestBody Category category) {
 		
-		return categoryService.post(model);
+		return categoryService.post(category);
 	}
 	
 	
@@ -39,9 +39,9 @@ public class CategoryController {
 	}
 	
 	@PutMapping("/update")
-	public Category update(@RequestBody Category model) {
+	public Category update(@RequestBody Category category) {
 		
-		return categoryService.update(model);
+		return categoryService.update(category);
 	}
 	
 

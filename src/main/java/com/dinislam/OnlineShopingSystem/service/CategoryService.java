@@ -47,7 +47,7 @@ public class CategoryService {
 		if(optional.isPresent()) {
 			
 			categoryRepository.delete(optional.get());
-			 return "success";
+			 return null;
 		}
 		return "fail";
 	}
