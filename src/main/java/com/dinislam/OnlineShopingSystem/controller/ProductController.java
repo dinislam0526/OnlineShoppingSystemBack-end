@@ -30,8 +30,8 @@ public class ProductController {
 	}
 	
 	
-	@GetMapping("/get/{id}")
-	public Product get(@PathVariable Integer id) {
+	@GetMapping("/getById/{id}")
+	public Product getById(@PathVariable Integer id) {
 		return productService.getById(id);
 	}
 	
