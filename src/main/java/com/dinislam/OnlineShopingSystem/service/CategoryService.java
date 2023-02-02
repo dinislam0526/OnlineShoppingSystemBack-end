@@ -52,7 +52,7 @@ public class CategoryService {
 		return "fail";
 	}
 	
-	public List<Category> modelList() {
+	public List<Category> getAllCategory() {
 			
 			return categoryRepository.findAll();
 		}

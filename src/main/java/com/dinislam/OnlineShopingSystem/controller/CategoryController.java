@@ -54,7 +54,7 @@ public class CategoryController {
 	@GetMapping("/getAll")
 	public List<Category> getAll() {
 		
-		return categoryService.modelList();
+		return categoryService.getAllCategory();
 	}
 	
 	@PostMapping("/postAll")
