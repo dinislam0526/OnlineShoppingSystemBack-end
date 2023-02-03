@@ -13,7 +13,11 @@ public class SignUpService {
 	SignUpRepository signUpRepository;
 	
 	public SignUp post(SignUp signUp) {
-		return signUpRepository.save(signUp);
+		if(!signUp.equals(null)) {
+			
+			return signUpRepository.save(signUp);
+		}
+		return null;
 	}
 	
 }
