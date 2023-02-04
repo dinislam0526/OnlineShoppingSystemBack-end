@@ -13,6 +13,7 @@ public class Category {
 	private long catid; 
 	private String catname;
 	private String catdesc;
+	private String catimage;
 	public long getCatid() {
 		return catid;
 	}
@@ -31,6 +32,13 @@ public class Category {
 	public void setCatdesc(String catdesc) {
 		this.catdesc = catdesc;
 	}
+	public String getCatimage() {
+		return catimage;
+	}
+	public void setCatimage(String catimage) {
+		this.catimage = catimage;
+	}
+	
 	
 	
 }

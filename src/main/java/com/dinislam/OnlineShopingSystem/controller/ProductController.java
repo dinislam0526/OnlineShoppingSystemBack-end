@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.dinislam.OnlineShopingSystem.model.Product;
@@ -54,6 +55,11 @@ public class ProductController {
 	@PostMapping("/postAll")
 	public List<Product> postAll(@RequestBody List<Product> modelList) {
 		return productService.postAll(modelList);
+	}
+	
+	@GetMapping("/getCategoryWiseProduct")
+	public List<Product> getCategoryWiseProduct(@RequestParam(value="catName") String catName) {
+		return productService.getCategoryWiseProduct(catName);
 	}
 	
 	

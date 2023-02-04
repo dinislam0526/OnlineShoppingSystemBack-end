@@ -49,4 +49,8 @@ public class ProductService {
 		return productRepository.saveAll(modelList);
 	}
 	
+	public List<Product> getCategoryWiseProduct(String catname) {
+		return productRepository.getCategoryWiseProduct(catname);
+	}
+	
 }
