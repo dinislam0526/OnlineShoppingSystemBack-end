@@ -32,7 +32,7 @@ public class SignUpController {
 	}
 	
 	@GetMapping("/getUser")
-	public List<SignUp> getUser(@RequestParam(value="username") String username ,@RequestParam(value="password") String password) {
+	public SignUp getUser(@RequestParam(value="username") String username ,@RequestParam(value="password") String password) {
 		return signUpServece.getUser(username, password);
 	}
 }
