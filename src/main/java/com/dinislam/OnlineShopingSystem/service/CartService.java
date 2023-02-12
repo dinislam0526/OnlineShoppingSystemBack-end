@@ -1,6 +1,7 @@
 package com.dinislam.OnlineShopingSystem.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,15 @@ public class CartService {
   public List<Cart> getCartList(Long userId) {
 		return cartRepository.getCartList(userId);
 	}
+  
+  public String removeToCart(Long id){
+	  Optional<Cart> optional = cartRepository.findById(id);
+	  if(optional.isPresent()) {
+		  cartRepository.delete(optional.get());
+		  return "delete Success";
+	  }
+	  return "fail";
+  }
   
   
 }

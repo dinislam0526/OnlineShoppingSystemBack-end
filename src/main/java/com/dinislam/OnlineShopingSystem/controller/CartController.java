@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,7 +28,6 @@ public class CartController {
 
 	@PostMapping("/post")
 	public Cart post(@RequestBody Cart cart) {
-		
 		return cartService.post(cart);
 	}
 	
@@ -34,4 +35,11 @@ public class CartController {
 	public List<Cart> getCartList(@RequestParam(value="userId") Long id) {
 		return cartService.getCartList(id);
 	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String removeToCart(@PathVariable Long id){
+		return cartService.removeToCart(id);
+	}
+	
+	
 }
