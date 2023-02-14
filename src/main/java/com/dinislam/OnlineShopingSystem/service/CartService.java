@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dinislam.OnlineShopingSystem.model.Cart;
-import com.dinislam.OnlineShopingSystem.model.Product;
 import com.dinislam.OnlineShopingSystem.repository.CartRepository;
 
 @Service

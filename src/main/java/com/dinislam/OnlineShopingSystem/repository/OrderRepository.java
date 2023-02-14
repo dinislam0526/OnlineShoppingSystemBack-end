@@ -6,13 +6,14 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.dinislam.OnlineShopingSystem.model.Cart;
+
+import com.dinislam.OnlineShopingSystem.model.Orders;
 
 @Repository
-public interface CartRepository extends JpaRepository<Cart ,Long>{
+public interface OrderRepository extends JpaRepository<Orders, Long>{
 
-	@Query(value = "SELECT * FROM cart where user_id =? ", nativeQuery = true)
-    List<Cart> getCartList(Long userId);
 	
+	@Query(value = "SELECT * FROM orders where user_id =? ", nativeQuery = true)
+    List<Orders> getOrderList(Long userId);
 	
 }
