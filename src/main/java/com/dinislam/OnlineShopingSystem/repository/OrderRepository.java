@@ -20,8 +20,8 @@ public interface OrderRepository extends JpaRepository<Orders, Long>{
 	
 	@Modifying
 	@Query(value ="update orders u set u.status = :status where u.order_id = :id", nativeQuery = true)
-    void getOrderList1(@Param("id") Long id,@Param("status") String status);
+    void updateStatus(@Param("id") Long id,@Param("status") String status);
 
-//	void getOrderList1(Long userId, String status);
+
 	
 }

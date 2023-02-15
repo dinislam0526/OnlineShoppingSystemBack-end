@@ -33,9 +33,15 @@ public class OrderCotroller {
 		return orderService.getOrderList(id);
 	}
 	
-	@PostMapping("/updateStatus")
-	public void getOrderList1(@RequestParam(value="userId") Long id) {
-		 orderService.getOrderList1(id, "Deliverd");
+	@GetMapping("/getAllOrderList")
+	public List<Orders> getAllOrderList() {
+		return orderService.getAllOrderList();
 	}
+	
+	@PostMapping("/updateStatus")
+	public void updateStatus(@RequestParam(value="orderId") Long id) {
+		 orderService.updateStatus(id, "Deliverd");
+	}
+	
 	
 }

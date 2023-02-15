@@ -17,21 +17,26 @@ public class OrderService {
 	
 	
 	  public Orders post(Orders order) {
-			
 			if(!order.equals(null)) {
 				return orderRepository.save(order);
 			}
 			return null;
 		}
 	  
+	  
 	  public List<Orders> getOrderList(Long userId) {
 			return orderRepository.getOrderList(userId);
 		}
 	  
+	  public List<Orders> getAllOrderList() {
+			return orderRepository.findAll();
+		}
 	  
-	  public void getOrderList1(long userId, String status) {
-//			orderRepository.getOrderList1(userId, status);
-		  orderRepository.getOrderList1(userId, status);
+	  
+	  public void updateStatus(Long orderId, String status) {
+		  orderRepository.updateStatus(orderId, status);
 		}
 	
+	  
+	  
 }
