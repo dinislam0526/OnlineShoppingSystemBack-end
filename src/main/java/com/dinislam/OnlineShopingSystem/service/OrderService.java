@@ -27,5 +27,11 @@ public class OrderService {
 	  public List<Orders> getOrderList(Long userId) {
 			return orderRepository.getOrderList(userId);
 		}
+	  
+	  
+	  public void getOrderList1(long userId, String status) {
+//			orderRepository.getOrderList1(userId, status);
+		  orderRepository.getOrderList1(userId, status);
+		}
 	
 }

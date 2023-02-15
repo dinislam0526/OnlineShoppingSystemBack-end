@@ -16,8 +16,18 @@ public class Orders {
     private String name;
     private String email;
     private String address;
+    private String status;
 
-    private String contact;
+    
+    public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	private String contact;
 
 	public Long getOrderId() {
 		return orderId;
