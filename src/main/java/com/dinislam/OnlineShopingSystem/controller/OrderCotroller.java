@@ -39,8 +39,8 @@ public class OrderCotroller {
 	}
 	
 	@PostMapping("/updateStatus")
-	public void updateStatus(@RequestParam(value="orderId") Long id) {
-		 orderService.updateStatus(id, "Deliverd");
+	public void updateStatus(@RequestParam(value="orderId") Long id, @RequestParam(value="status") String status) {
+		 orderService.updateStatus(id, status);
 	}
 	
 	

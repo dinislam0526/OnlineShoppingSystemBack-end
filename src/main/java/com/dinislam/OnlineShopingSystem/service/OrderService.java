@@ -34,6 +34,7 @@ public class OrderService {
 	  
 	  
 	  public void updateStatus(Long orderId, String status) {
+		  System.out.println("------------hit"+orderId+"--"+status);
 		  orderRepository.updateStatus(orderId, status);
 		}
 	
