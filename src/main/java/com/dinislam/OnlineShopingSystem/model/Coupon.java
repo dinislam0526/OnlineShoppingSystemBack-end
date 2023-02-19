@@ -15,6 +15,7 @@ public class Coupon {
 	private String couponCode;
 	private int  percentage;
 	private String description;
+	private int minimumRange;
 	
 	
 	public long getCouponId() {
@@ -41,5 +42,13 @@ public class Coupon {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	public int getMinimumRange() {
+		return minimumRange;
+	}
+	public void setMinimumRange(int minimumRange) {
+		this.minimumRange = minimumRange;
+	}
+	
+	
 	
 }
