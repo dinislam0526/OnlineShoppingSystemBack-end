@@ -48,7 +48,7 @@ public class CouponController {
 	
 	
 	@GetMapping("/getByCouponCode")
-	public List<Coupon> getByCouponCode(@RequestParam(value="couponCode") String couponCode) {
+	public Coupon getByCouponCode(@RequestParam(value="couponCode") String couponCode) {
 		return couponService.getByCouponCode(couponCode);
 	}
 	

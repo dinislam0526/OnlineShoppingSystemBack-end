@@ -48,7 +48,7 @@ public class CouponService {
 		}
 	
 	
-	public List<Coupon> getByCouponCode(String couponCode) {
+	public Coupon getByCouponCode(String couponCode) {
 		return couponRepository.getByCouponCode(couponCode);
 	}
 	

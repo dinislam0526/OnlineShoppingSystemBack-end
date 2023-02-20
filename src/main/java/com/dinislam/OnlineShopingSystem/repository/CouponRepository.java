@@ -14,7 +14,7 @@ public interface CouponRepository extends JpaRepository<Coupon, Long>{
 
 	
 	
-	@Query(value = "SELECT * FROM coupon where coupon_code =? ", nativeQuery = true)
-    List<Coupon> getByCouponCode(String couponCode);
+	@Query(value = "SELECT * FROM coupon where coupon_code =? limit 1", nativeQuery = true)
+    Coupon getByCouponCode(String couponCode);
 	
 }
