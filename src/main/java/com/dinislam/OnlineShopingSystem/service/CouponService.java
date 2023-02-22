@@ -21,13 +21,13 @@ public class CouponService {
 		return null;
 	}
 	
-	public Coupon getById(Long id) {
-		Optional<Coupon> optional = couponRepository.findById(id);
-		if(optional.isPresent()) {
-			return optional.get();
-		}
-		return null;
-	}
+//	public Coupon getById(Long id) {
+//		Optional<Coupon> optional = couponRepository.findById(id);
+//		if(optional.isPresent()) {
+//			return optional.get();
+//		}
+//		return null;
+//	}
 	
 	
 	public Coupon update(Coupon coupon) {

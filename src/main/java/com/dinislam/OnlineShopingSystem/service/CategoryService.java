@@ -33,19 +33,12 @@ public class CategoryService {
 	}
 	
 	public Category update(Category category) {
-		
-//		Optional<Model> optional = repository.findById(model.getId());
-//		if(optional.isPresent()) {
-//			return optional.get();
-//		}
-//		
 		return categoryRepository.save(category);
 	}
 		
 	public String delete(Long id) {
 		Optional<Category> optional = categoryRepository.findById(id);
 		if(optional.isPresent()) {
-			
 			categoryRepository.delete(optional.get());
 			 return null;
 		}
