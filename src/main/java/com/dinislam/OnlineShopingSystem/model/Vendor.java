@@ -10,28 +10,29 @@ public class Vendor {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long vendor_id;
-	private String name;
-	private String description;
+	private long vendorId;
+	private String vendorName;
+	private String vendordesc;
 	
-	public long getVendor_id() {
-		return vendor_id;
+	public long getVendorId() {
+		return vendorId;
 	}
-	public void setVendor_id(long vendor_id) {
-		this.vendor_id = vendor_id;
+	public void setVendorId(long vendorId) {
+		this.vendorId = vendorId;
 	}
-	public String getName() {
-		return name;
+	public String getVendorName() {
+		return vendorName;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setVendorName(String vendorName) {
+		this.vendorName = vendorName;
 	}
-	public String getDescription() {
-		return description;
+	public String getVendordesc() {
+		return vendordesc;
 	}
-	public void setDescription(String description) {
-		this.description = description;
+	public void setVendordesc(String vendordesc) {
+		this.vendordesc = vendordesc;
 	}
+	
 	
 	
 }
