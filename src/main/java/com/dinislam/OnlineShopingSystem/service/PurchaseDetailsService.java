@@ -1,5 +1,6 @@
 package com.dinislam.OnlineShopingSystem.service;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,6 +42,9 @@ public class PurchaseDetailsService {
 		return "fail";
 	}
 	
+	public List<PurchaseDetails> getAll() {
+		return purchaseDetailsRepo.findAll();
+	}
 	
 	
 }

@@ -1,6 +1,8 @@
 package com.dinislam.OnlineShopingSystem.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -49,6 +51,10 @@ public class PurchaseDetailsController {
 		return purchaseDetailsService.delete(id);
 	}
 	
+	@GetMapping("/getAll")
+	public List<PurchaseDetails> getAll() {
+		return purchaseDetailsService.getAll();
+	}
 	
 	
 }
