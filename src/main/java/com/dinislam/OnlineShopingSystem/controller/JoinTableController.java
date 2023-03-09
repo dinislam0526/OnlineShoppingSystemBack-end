@@ -19,7 +19,9 @@ public class JoinTableController {
 	JoinTableService joinTableService;
 	
 	@GetMapping("/getAll")
-	public List<Object> getAllProductAndPurchaseAndVendor(){
+	public List<Object[]> getAllProductAndPurchaseAndVendor(){
 		return joinTableService.getAllProductAndPurchaseAndVendor();
 	}
+	
+	
 }

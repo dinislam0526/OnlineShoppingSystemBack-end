@@ -13,7 +13,7 @@ public class JoinTableService {
 	@Autowired
 	JoinTableRepository joinTableRepository;
 	
-	public List<Object> getAllProductAndPurchaseAndVendor(){
+	public List<Object[]> getAllProductAndPurchaseAndVendor(){
 		return joinTableRepository.getAllProductAndPurchaseAndVendor();
 	}
 }
